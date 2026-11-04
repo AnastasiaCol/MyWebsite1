@@ -84,13 +84,27 @@ h1{
   font-size: 12px;
 }
 
-.header-content nav a 
-{
-  margin-right: 0px;
-  text-decoration: none;
-  color: #ffffff;
-  cursor: url('Image/Cursor2.png'), pointer;
-  
+.header-content nav {
+    display: flex;
+    flex-wrap: nowrap;         
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+
+.header-content nav a {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 200px;
+
+    height: 50px;
+    margin-right: 0;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 nav a 
@@ -368,4 +382,15 @@ a
 {
   width: 100%;                 
   height: auto;                
+}
+
+/* Mobile Ansicht */
+@media screen and (max-width: 1200px) {
+
+    /* Linke und rechte Spalte ausblenden */
+    .left-column,
+    .right-column {
+        display: none;
+    }
+
 }
